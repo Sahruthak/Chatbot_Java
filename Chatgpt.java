@@ -55,6 +55,8 @@ class Chatbot extends JFrame {
                     replyMeth("I'm doing well. Thank you for asking!");
                 } else if (userInput.contains("good morning")) {
                     replyMeth("Good Morning! How are you today?");
+                } else if (userInput.contains("good")) {
+                    replyMeth("Nice to hear!");
                 } else if (userInput.contains("good evening")) {
                     replyMeth("Good Evening! How's your day going?");
                 } else if (userInput.contains("what is your name")) {
