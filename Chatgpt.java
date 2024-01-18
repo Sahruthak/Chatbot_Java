@@ -71,6 +71,7 @@ class Chatbot extends JFrame {
                     // Default response for unrecognized input
                     replyMeth("Sorry, I can't understand that. Feel free to ask me something else!");
                 }
+            }
         });
     }
 
