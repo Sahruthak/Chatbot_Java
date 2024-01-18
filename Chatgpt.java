@@ -49,28 +49,28 @@ class Chatbot extends JFrame {
                 chatArea.append("You --> " + text + "\n");
                 inputField.setText("");
 
-                if (text.contains("hi")) {
+                if (userInput.contains("hi")) {
                     replyMeth("Hello there!");
-                } else if (text.contains("how are you")) {
-                    replyMeth("I'm Good. Thank you for asking!");
-                } else if (text.contains("Good morning")) {
-                    replyMeth("Good Morning ! how are you? ");
-                }else if (text.contains("Good evening")) {
-                    replyMeth("Good evenning ! how are you? ");
-                }else if (text.contains("how are you")) {
-                    replyMeth("I'm Good :). Thank you for asking!");
-                }else if (text.contains("what is your name")) {
+                } else if (userInput.contains("how are you")) {
+                    replyMeth("I'm doing well. Thank you for asking!");
+                } else if (userInput.contains("good morning")) {
+                    replyMeth("Good Morning! How are you today?");
+                } else if (userInput.contains("good evening")) {
+                    replyMeth("Good Evening! How's your day going?");
+                } else if (userInput.contains("what is your name")) {
                     replyMeth("I'm YYY");
-                } else if (text.contains("how old are you?")) {
-                    replyMeth("I'm immortal you mess with my system :(, so please don't!");
-                } else if (text.contains("your interests?")) {
-                    replyMeth("Talking to you.");
-                } else if (text.contains("bye")) {
-                    replyMeth("Too Soon :( Anyways\nTake care! ");
+                } else if (userInput.contains("how old are you")) {
+                    replyMeth("I'm immortal, unless you mess with my system :(, so please don't!");
+                } else if (userInput.contains("your interests")) {
+                    replyMeth("My main interest is talking to you.");
+                } else if (userInput.contains("tell me a joke")) {
+                    replyMeth("Why don't scientists trust atoms? Because they make up everything!");
+                } else if (userInput.contains("bye")) {
+                    replyMeth("Too soon :( Anyways, take care!");
                 } else {
-                    replyMeth("Sorry, I can't understand. Feel free to ask me something else!");
+                    // Default response for unrecognized input
+                    replyMeth("Sorry, I can't understand that. Feel free to ask me something else!");
                 }
-            }
         });
     }
 
