@@ -43,39 +43,44 @@ class Chatbot extends JFrame {
     }
 
     private void addActionListeners() {
-        sendButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String text = inputField.getText().toLowerCase();
-                chatArea.append("You --> " + text + "\n");
-                inputField.setText("");
+    sendButton.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+            String text = inputField.getText().toLowerCase();
+            chatArea.append("You --> " + text + "\n");
+            inputField.setText("");
 
-                if (userInput.contains("hi")) {
-                    replyMeth("Hello there!");
-                } else if (userInput.contains("how are you")) {
-                    replyMeth("I'm doing well. Thank you for asking!");
-                } else if (userInput.contains("good morning")) {
-                    replyMeth("Good Morning! How are you today?");
-                } else if (userInput.contains("good")) {
-                    replyMeth("Nice to hear!");
-                } else if (userInput.contains("good evening")) {
-                    replyMeth("Good Evening! How's your day going?");
-                } else if (userInput.contains("what is your name")) {
-                    replyMeth("I'm YYY");
-                } else if (userInput.contains("how old are you")) {
-                    replyMeth("I'm immortal, unless you mess with my system :(, so please don't!");
-                } else if (userInput.contains("your interests")) {
-                    replyMeth("My main interest is talking to you.");
-                } else if (userInput.contains("tell me a joke")) {
-                    replyMeth("Why don't scientists trust atoms? Because they make up everything!");
-                } else if (userInput.contains("bye")) {
-                    replyMeth("Too soon :( Anyways, take care!");
-                } else {
-                    // Default response for unrecognized input
-                    replyMeth("Sorry, I can't understand that. Feel free to ask me something else!");
-                }
+            if (text.contains("hi")) {
+                replyMeth("Hello there!");
+            } else if (text.contains("how are you")) {
+                replyMeth("I'm doing well. Thank you for asking!");
+            } else if (text.contains("good morning")) {
+                replyMeth("Good Morning! How are you today?");
+            } else if (text.contains("good")) {
+                replyMeth("Nice to hear!");
+            } else if (text.contains("good evening")) {
+                replyMeth("Good Evening! How's your day going?");
+            } else if (text.contains("what is your name")) {
+                replyMeth("I'm your friendly ChatGPT!");
+            } else if (text.contains("how old are you")) {
+                replyMeth("I'm ageless in the digital realm!");
+            } else if (text.contains("your interests")) {
+                replyMeth("My main interest is assisting and chatting with you.");
+            } else if (text.contains("tell me a joke")) {
+                replyMeth("Sure, here's a joke: Why did the computer catch a cold? Because it had a virus!");
+            } else if (text.contains("study")) {
+                replyMeth("Are you working on anything specific? I'm here to help!");
+            } else if (text.contains("favorite subject")) {
+                replyMeth("I don't have personal preferences, but I can help you with various subjects!");
+            } else if (text.contains("bye")) {
+                replyMeth("Too soon :( Anyways, take care!");
+            } else {
+                // Default response for unrecognized input
+                replyMeth("Sorry, I can't understand that. Feel free to ask me something else!");
             }
-        });
-    }
+        }
+    });
+}
+
 
     private void replyMeth(String s) {
         chatArea.append("ChatBot --> " + s + "\n");
