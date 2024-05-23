@@ -81,7 +81,6 @@ class Chatbot extends JFrame {
     });
 }
 
-
     private void replyMeth(String s) {
         chatArea.append("ChatBot --> " + s + "\n");
     }
